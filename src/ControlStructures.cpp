@@ -1,14 +1,16 @@
-#include "ControlStructures.h"
 #include <iostream>
 #include <string>
 #include <ctime>
 
 using namespace std;
 
-string gameLogic(int computerChoice){
-    string result;
-    int playAgain;
+int main(){
+    int playAgain = 0;
+    int computerChoice = 0;
+
     cout << "Welcome to Rock, Paper, Scissors, Lizard, Spock!" << endl;
+
+    do{
         //TODO: Ask the player which option they will choose
 
         if(computerChoice == 0){
@@ -42,12 +44,5 @@ string gameLogic(int computerChoice){
         }while(playAgain != 1 && playAgain != 2);
     }while(playAgain == 1);
 
-    return result;
-}
-
-#ifndef TESTING
-int main(){
-    gameLogic(0);
     return 0;
 }
-#endif
